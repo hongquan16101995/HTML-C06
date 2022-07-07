@@ -1,0 +1,5 @@
+/*selector bằng tên thẻ*/
+p {
+    color: red;
+    font-size: 30px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="get">
+    <input type="text" name="name" placeholder="Nhập họ và tên">
+    <input type="number">
+    <input type="date">
+    <input type="datetime-local">
+    <input type="range" value="80">
+    <!--3 type dạng nút-->
+    <br>
+    <input type="button" value="Button">
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    <!--thẻ tạo nút ấn: button-->
+    <br>
+    <button>Button</button>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <!--input của dạng radio và checkbox-->
+    <br>
+    <!--thuộc tính name: dùng để định danh cho trường dữ liệu dùng để gửi về server-->
+    <input name="gender" value="male" type="radio" id="nam"><label for="nam">Nam</label>
+    <label><input name="gender" value="female" type="radio">Nữ</label>
+    <input type="checkbox">Nam
+    <input type="checkbox" >Nữ
+    <br>
+<!--    thẻ tạo danh sách có sẵn drop-down-->
+    <select name="select">
+        <option value="1">A</option>
+        <option value="2">B</option>
+        <option value="3">C</option>
+    </select>
+<!--    thẻ textarea-->
+    <textarea cols="30" rows="7"></textarea>
+</form>
+</body>
+</html>
