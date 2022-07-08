@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--sự kiện onclick-->
+<p onclick="a()">HelloWorld</p>
+<button onclick="a()">HelloWorld</button>
+<!--sự kiện onchange, oninput-->
+<input type="text" id="a" oninput="b()">
+<p id="r"></p>
+<!--sự kiện onmouseover, onmouseout-->
+<button id="button" onmouseover="c()" onmouseout="d()">C0622I1</button>
+</body>
+<script>
+    function a() {
+        alert("C0622I1")
+        document.getElementById("button").style.backgroundColor = "white"
+    }
+
+    function b() {
+        let a = document.getElementById("a").value
+        document.getElementById("r").innerHTML = a
+    }
+
+    function c() {
+        document.getElementById("button").style.backgroundColor = "red"
+    }
+
+    function d() {
+        document.getElementById("button").style.backgroundColor = "blue"
+    }
+</script>
+</html>

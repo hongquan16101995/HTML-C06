@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="f()">HelloWorld</button>
+<button onclick="f1()">HelloWorld1</button>
+<p id="result"></p>
+<p id="result1"></p>
+</body>
+<script>
+  //sử dụng alert()
+  // console.log(alert("HelloWorld"))
+  //sử dụng confirm()
+  // console.log(confirm("HelloWorld"))
+  //sử dụng console.log()
+  // console.log("HelloWorld")
+  //sử dụng document.write()
+  function f() {
+    document.write("<h1>C0622I1</h1>")
+  }
+  //sử dụng document.getElementById()
+  function f1() {
+    document.getElementById("result").innerText = "<h1>C0622I1</h1>"
+    document.getElementById("result1").innerHTML = "<h1>C0622I1</h1>"
+  }
+</script>
+</html>
