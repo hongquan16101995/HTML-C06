@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" value="Hello" readonly>
+<img id="nobita" border="1" src="../html/ava.jpg" style="position: relative; left: 100px; top: 100px; width: 30%"/>
+</body>
+<script>
+    function upArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) - 5 + 'px';
+    }
+
+    function downArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
+    }
+
+    function leftArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+    }
+
+    function rightArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
+
+    }
+
+    function moveSelection(evt) {
+        switch (evt.code) {
+            // case 37:
+            case "ArrowLeft":
+                leftArrowPressed();
+                break;
+            // case 39:
+            case "ArrowRight":
+                rightArrowPressed();
+                break;
+            case 38:
+            case "ArrowUp":
+                upArrowPressed();
+                break;
+            case 40:
+            case "ArrowDown":
+                downArrowPressed();
+                break;
+        }
+    }
+
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+
+    window.onload = docReady
+</script>
+</html>
