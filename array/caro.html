@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="init()">
+<div id="board"></div>
+<button onclick="start()">Start</button>
+<button onclick="change()">Change Value</button>
+</body>
+<script>
+    let array
+    let value = "X"
+    function init() {
+        let length = +prompt("Nhập phạm vị muốn chơi: ")
+        array = new Array(length)
+        for (let i = 0; i < array.length; i++) {
+            array[i] = new Array(length)
+            for (let j = 0; j < array[i].length; j++) {
+                array[i][j] = '.'
+            }
+        }
+    }
+
+    function start() {
+        console.log(array)
+        let data = ''
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                data += array[i][j] + "&emsp;"
+            }
+            data += "<br>"
+        }
+        data += "<button onclick='alert(\"hello\")'>Click me</button>"
+        document.getElementById("board").innerHTML = data
+    }
+
+    function change() {
+        let x = +prompt("Nhập vào vị trí hàng: ")
+        let y = +prompt("Nhập vào vị trí cột: ")
+        if (x >= array.length || y >= array.length) {
+            alert("Nhập lại đê")
+            return;
+        }
+        array[x][y] = value
+        if (value === "X") {
+            value = "O"
+        } else {
+            value = "X"
+        }
+        start()
+    }
+</script>
+</html>

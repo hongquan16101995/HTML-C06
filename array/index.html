@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //array literal
+    let arr = [1, 2, 3]
+    console.log(arr)
+    //truy xuất phần tử theo chỉ số index bất kỳ
+    console.log(arr[2])
+    arr[2] = 100
+    console.log(arr)
+    console.log(arr[2])
+    //thay đổi giá trị của phần tử theo chỉ số index bất kỳ
+    arr[10] = 1000
+    console.log(arr)
+    console.log(arr[10])
+    console.log(arr[20])
+    //khai báo dạng object
+    let arr1 = new Array(1, 2, 3)
+    console.log(arr1)
+    let arr2 = new Array(3)
+    console.log(arr2)
+    //các kld trong mảng
+    let a = [1, "a", true, null, undefined]
+    console.log(a)
+    //for in
+    for (let e in a) {
+        console.log(e)
+    }
+    //for of
+    for (let e of a) {
+        console.log(e)
+    }
+    //for
+    for (let i = 0; i < a.length; i++) {
+        console.log("" + i + a[i])
+    }
+
+    let i = 0;
+    while (i < a.length) {
+        console.log("" + i + a[i])
+        i++
+    }
+</script>
+</html>
