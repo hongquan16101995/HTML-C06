@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arr = [1,2,3,4,5,6,7,3]
+    //indexOf-lastIndexOf: trả về index đầu tiên và cuối cùng của phần tử trong mảng
+    // trả về -1 nếu không có
+    console.log(arr.indexOf(3))
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 3) {
+            console.log(i)
+            break;
+        }
+    }
+    console.log(arr.lastIndexOf(3))
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (arr[i] === 3) {
+            console.log(i)
+            break;
+        }
+    }
+    //push-pop: thêm/xóa phần tử cuối của mảng
+    arr.push(10)
+    console.log(arr)
+    arr.pop()
+    console.log(arr)
+    //unshift-shift: thêm/xóa phần tử đầu của mảng
+    arr.unshift(10)
+    console.log(arr)
+    arr.shift()
+    console.log(arr)
+    //toString: đưa về dạng chuỗi, giữ nguyên cấu trúc
+    console.log(arr.toString())
+    //join: đưa về chuỗi, có thể thay đổi định dạng cơ bản
+    console.log(arr.join())
+    console.log(arr.join(""))
+    console.log(arr.join(" "))
+    console.log(arr.join("-"))
+    //reverse: đảo ngược phần từ trong mảng
+    // arr.reverse()
+    console.log(arr)
+    //concat: nối 2 mảng nhỏ thành 1 mảng có kích thước bằng 2 mảng đó
+    let arr1 = [1,2,3]
+    let arr2 = arr.concat(arr1)
+    console.log(arr2)
+    //splice: cắt phần tử, tác động lên mảng gốc
+    // tham số 1: vị trí bắt đầu cắt
+    // tham số 2: số lượng phần tử cắt
+    let arrx = [1,2,3,4,5]
+    // arrx.splice(1,3)
+    console.log(arrx.splice(1,3))
+    console.log(arrx.splice(1,1))
+    console.log(arrx)
+    //slice: cắt phần tử, không tác tác động mảng gốc (mượn giá trị)
+    // tham số 1: vị trí bắt đầu cắt
+    // tham số 2: vị trí kết thúc cắt - 1
+    let arrz = [1,2,3,4,5]
+    // arrz.slice(1,3)
+    console.log(arrz.slice(1,3))
+    console.log(arrz.slice(1,1))
+    console.log(arrz)
+
+    //chuyển từ chuỗi về mảng
+    let a = "1234"
+    let b = "abc+d"
+    let c = "Hello World"
+    console.log(a.split(""))
+    console.log(b.split(""))
+    console.log(c.split(""))
+    console.log(c.split(" "))
+
+    //sort: sắp xếp
+    let array = [1,4,7,3,2,9,7,4,2,67,0]
+    console.log(array)
+    // array.sort((a,b) => {return a - b})
+    array.sort((a,b) => {return b - a})
+    console.log(array)
+
+    //map: tạo 1 giá trị mới cho mảng
+    let array1 = [1,2,3]
+    array1 = array1.map((a) => {return a * 1.5})
+    console.log(array1)
+    // console.log(array2)
+</script>
+</html>
