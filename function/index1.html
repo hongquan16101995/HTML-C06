@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //4 kiểu hàm hay dùng
+    //hàm không tham số, không giá trị trả về
+    function m1() {
+        let a = 10
+        let b = 20
+        console.log(a + b)
+    }
+    m1()
+
+    //hàm có tham số, không giá trị trả về
+    let a = 10
+    let b = 20
+    function m2(x, y) {
+        console.log(x + y)
+    }
+    m2(a, b)
+
+    //hàm không tham số, có giá trị trả về
+    function m3() {
+        let a = 10
+        let b = 20
+        return a + b
+    }
+    let sum = m3()
+    console.log(sum)
+
+    //hàm có tham số, có giá trị trả về
+    let a1 = 10
+    let b1 = 20
+    function m4(x1, y1) {
+        return x1 + y1
+    }
+    console.log(m4(a1, b1))
+</script>
+</html>

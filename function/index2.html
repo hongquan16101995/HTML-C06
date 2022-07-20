@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //shadow
+    let a = 10
+
+    function m1(a) {
+        console.log(a)
+    }
+
+    m1(a)
+    m1(100)
+
+    //coding convention
+    function m2(b) {
+        console.log(b[0])
+    }
+    m2(1)
+    let arr = [4,2,3,54]
+    m2(arr)
+
+    //return
+    function m3() {
+        for (let i = 0; i < 10; i++) {
+            console.log(i)
+            if (i === 5) {
+                return "abc"
+            }
+        }
+    }
+
+    console.log(m3())
+</script>
+</html>
