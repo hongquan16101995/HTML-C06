@@ -1,0 +1,17 @@
+table {
+    width: 400px;
+
+}
+
+#title {
+    text-align: left;
+}
+
+button {
+    color: white;
+    background-color: #1caf1c;
+    border: none;
+    width: 60px;
+    height: 25px;
+    border-radius: 3px;
+}
