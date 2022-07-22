@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //khai báo lớp với ES6
+    let orange = new Fruit("orange", 5)
+    class Fruit {
+        color
+        weight
+
+        constructor(color, weight) {
+            this.color = color
+            this.weight = weight
+        }
+
+        getColor() {
+            return this.color
+        }
+
+        setColor(color) {
+            this.color = color
+        }
+    }
+
+    //khai báo 1 đối tượng thuộc lớp Fruit
+    let orange = new Fruit("orange", 5)
+    //cách để gọi 1 phương thức thuộc đối tượng
+    console.log(orange.getColor())
+    orange.setColor("green")
+    console.log(orange.getColor())
+</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class MyDate {
+        day
+        month
+        year
+
+        constructor(ngay, thang, nam) {
+            this.day = ngay
+            this.month = thang
+            this.year = nam
+        }
+
+        getDay() {
+            return this.day
+        }
+
+        getMonth() {
+            return this.month
+        }
+
+        getYear() {
+            return this.year
+        }
+
+        setDay(ngay) {
+            this.day = ngay
+        }
+
+        setMonth(thang) {
+            this.month = thang
+        }
+
+        setYear(nam) {
+            this.year = nam
+        }
+
+        setDate(ngay, thang, nam) {
+            this.day = ngay
+            this.month = thang
+            this.year = nam
+        }
+
+        toString() {
+            console.log(this.day + "/" + this.month + "/" + this.year)
+        }
+    }
+
+    let myDay = new MyDate(2,2,2007)
+    myDay.toString()
+    myDay.setDate(10,10,2019)
+    myDay.toString()
+    console.log(myDay.year)
+    console.log("------")
+    let myDay1 = new MyDate(10,10,2019)
+    myDay1.toString()
+</script>
+</html>

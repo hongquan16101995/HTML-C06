@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //literal
+    let apple = {color: "red", weight: 10}
+
+    //sử dụng function
+    //khởi tạo 1 lớp, có tên là Fruit
+    //có 2 thuộc tính: color, weight
+    let orange = new Fruit("orange", 5)
+    function Fruit(color, weight) {
+        this.color = color
+        this.weight = weight
+
+        this.getColor = function () {
+            return this.color
+        }
+
+        this.setColor = function (color) {
+            this.color = color
+        }
+    }
+
+    //khai báo 1 đối tượng thuộc lớp Fruit
+    let orange = new Fruit("orange", 5)
+    //cách để gọi 1 phương thức thuộc đối tượng
+    console.log(orange.getColor())
+    orange.setColor("green")
+    console.log(orange.getColor())
+</script>
+</html>
