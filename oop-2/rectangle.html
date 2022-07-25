@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas width="1200px" height="600px" id="canvas" style="border: 1px solid"></canvas>
+<br>
+</body>
+<script>
+    class Rectangle {
+        width
+        height
+
+        constructor(width, height) {
+            this.width = width
+            this.height = height
+        }
+
+        getWidth() {
+            return this.width
+        }
+
+        setWidth(width) {
+            this.width = width
+        }
+
+        setHeight(height) {
+            this.height = height
+        }
+
+        calculatorArea() {
+            return this.width * this.height
+        }
+
+        calculatorPerimeter() {
+            return (this.width + this.height) * 2
+        }
+
+        drawOnScreen(x, y) {
+            let ctx = document.getElementById("canvas").getContext("2d")
+            ctx.fillStyle = '#d712cd'
+            ctx.fillRect(x, y, this.width, this.height)
+        }
+    }
+
+    //1. khai báo và khởi tạo 1 đối tượng
+    let rec1 = new Rectangle(100, 50)
+    let area = rec1.calculatorArea()
+    let peri = rec1.calculatorPerimeter()
+    document.write("Diện tích là: " + area +"m2; chu vi là: " + peri +"m<br>")
+    document.write("Chiều dài là: " + rec1.getWidth() +"<br>")
+    //2. Hiển thị lên màn hình
+    rec1.drawOnScreen(500, 200)
+    //3. Thay đổi chỉ số
+    rec1.setWidth(200)
+    rec1.setHeight(100)
+    //4. In diện tích và chu vi
+    rec1.drawOnScreen(500, 400)
+    area = rec1.calculatorArea()
+    peri = rec1.calculatorPerimeter()
+    document.write("Diện tích là: " + area +"m2; chu vi là: " + peri +"m<br>")
+    document.write("Chiều dài là: " + rec1.getWidth())
+</script>
+</html>

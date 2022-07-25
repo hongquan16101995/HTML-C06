@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="result"></div>
+<button onclick="start()">Start</button>
+<button onclick="stop()">Stop</button>
+</body>
+<script>
+    let num = 0
+    let demo
+
+    function display() {
+        document.getElementById("result").innerHTML
+            = "<h1>" + (++num) + "</h1>"
+    }
+
+    function start() {
+        demo = setInterval(display, 1000)
+    }
+
+    function stop() {
+        clearInterval(demo)
+    }
+</script>
+</html>

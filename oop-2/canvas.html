@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas width="1200px" height="600px" id="canvas" style="border: 1px solid"></canvas>
+</body>
+<script>
+  //lấy khung canvas để vẽ
+  let ctx = document.getElementById("canvas").getContext("2d")
+  //hình chữ nhật
+  ctx.fillStyle = '#d712cd'
+  ctx.fillRect(100, 100, 250, 80)
+  ctx.strokeRect(400, 100, 250, 80)
+
+  //hình tròn
+  ctx.beginPath()
+  ctx.fillStyle = '#091fa3'
+  ctx.arc(300, 300, 100, 0, Math.PI*2)
+  ctx.stroke()
+  ctx.closePath()
+</script>
+</html>
